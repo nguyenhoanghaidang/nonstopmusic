@@ -1,0 +1,1 @@
+{"name":"nhac-lien","version":"2.0.0","private":true,"description":"Trình phát nhạc chuyển bài liền mạch: nhạc trong máy và YouTube","scripts":{"start":"node server.js"},"engines":{"node":">=18"}}

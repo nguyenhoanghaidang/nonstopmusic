@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nhạc Liền</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bg"></div>
+<header class="top"><b>Nhạc Liền</b><span>Nhạc trong máy và YouTube, chuyển bài liền mạch</span></header>
+<div class="app">
+  <section class="stage">
+    <div class="covers"><div class="cover main" id="c0"></div><div class="cover gone-r" id="c1"></div></div>
+    <h1 id="title">Chưa có bài hát</h1>
+    <div id="artist">Thêm nhạc từ máy để bắt đầu</div>
+    <div class="row"><span class="t" id="tc">0:00</span><input type="range" id="seek" min="0" max="1" step="0.1" value="0" aria-label="Tua"><span class="t" id="td">0:00</span></div>
+    <div class="row ctl">
+      <button id="shuf" title="Ngẫu nhiên">Ngẫu nhiên</button>
+      <button id="prev">Trước</button>
+      <button id="play">Phát</button>
+      <button id="next">Sau</button>
+      <button id="rep" title="Lặp lại danh sách">Lặp lại</button>
+    </div>
+    <div class="opts">
+      <div class="row"><label for="cf">Chuyển bài liền</label><input type="range" id="cf" min="0" max="12" step="1"><span class="t" id="cfl" style="width:48px"></span></div>
+      <div class="row"><label for="vol">Âm lượng</label><input type="range" id="vol" min="0" max="1" step="0.01" value="0.9"></div>
+    </div>
+  </section>
+  <aside class="side">
+    <form class="link" id="linkForm"><input id="link" type="text" placeholder="Dán link YouTube (bài hát hoặc danh sách phát)" aria-label="Link YouTube"><button id="addLink" class="on">Thêm link</button></form>
+    <p id="msg" role="status"></p>
+    <div class="bar">
+      <button id="add">Thêm file</button>
+      <button id="addDir">Thêm thư mục</button>
+      <button id="clear">Xóa danh sách</button>
+    </div>
+    <ul id="list"></ul>
+    <div class="ytbox" id="ytbox" aria-label="Trình phát YouTube"><div id="y0"></div><div id="y1"></div></div>
+    <input type="file" id="files" accept="audio/*" multiple hidden>
+    <input type="file" id="dir" webkitdirectory multiple hidden>
+  </aside>
+</div>
+<footer class="top foot"><span id="srv"></span></footer>
+<script src="app.js"></script>
+</body>
+</html>
